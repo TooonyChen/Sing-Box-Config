@@ -6,7 +6,7 @@
 
 ## 使用说明
 
-1. 使用docker在服务器端创建sub store，记得更改变量`SUB_STORE_FRONTEND_BACKEND_PATH`的值，改成20位以内包含字母和数字的密码，并且记牢它。
+1. 使用docker在服务器端创建sub store，**记得更改变量`SUB_STORE_FRONTEND_BACKEND_PATH`的值，改成20位以内包含字母和数字的密码，并且记牢它。**
 
 ```
 	docker run -it -d \
