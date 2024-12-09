@@ -21,9 +21,9 @@
 
 2. 在sub-store创建好你的订阅链接
 
-3. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion)
+3. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion)
 
-4. 选择脚本操作，填入 [写入Outbound脚本](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Config/refs/heads/main/scriptForAddingOutbound.js)
+4. 选择脚本操作，填入 [写入Outbound脚本](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/scriptForAddingOutbound.js)
 
 5. 保存，在文件管理中复制配置文件链接，稍后填入网关端的脚本中
 
@@ -31,7 +31,7 @@
 
 7. 请你把`/usr/bin/sing-box`和`/etc/sing-box`都改成777权限，以防奇怪的错误出现
 
-8. 使用root权限运行脚本，如果你使用的是Tun模式，运行 [run_tun.sh](https://github.com/TooonyChen/Sing-Box-Config/blob/main/run_tun.sh) 。如果你使用的是Tproxy模式，运行 [run_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Config/blob/main/run_tproxy.sh) 。请你把刚才复制的配置文件链接填入：`FULL_URL="https://XXXXXX/api/file/SingBox-Tproxy"`
+8. 使用root权限运行脚本，如果你使用的是Tun模式，运行 [run_tun.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tun.sh) 。如果你使用的是Tproxy模式，运行 [run_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tproxy.sh) 。请你把刚才复制的配置文件链接填入：`FULL_URL="https://XXXXXX/api/file/SingBox-Tproxy"`
 
 9. sing-box面板链接为`[网关IP]:9095`,默认无密码。
 
