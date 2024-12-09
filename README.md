@@ -36,6 +36,7 @@
 9. 使用root权限运行脚本
    - 如果你使用的是Tun模式，运行 [run_tun.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tun.sh)
    - 如果你使用的是Tproxy模式，运行 [run_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tproxy.sh)
+   
    请你把刚才复制的配置文件链接填入：`FULL_URL="https://XXXXXX/api/file/SingBox-Tproxy"`
 
 10. Sing-box面板链接为`[网关IP]:9095`，默认无密码。
