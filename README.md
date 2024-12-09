@@ -19,7 +19,7 @@
 	xream/sub-store
 ```
 
-2. 进入sub-store，默认地址为`服务器IP:3001`。在sub-store创建好你的订阅链接
+2. 进入sub-store，默认地址为`http://[服务器IP]:3001`，后端链接默认为`http://[服务器IP]:3001/你的密码`。在sub-store创建好你的订阅链接
 
 3. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion)
 
