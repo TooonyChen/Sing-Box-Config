@@ -13,29 +13,32 @@
 	--restart=always \
 	-e "SUB_STORE_CRON=55 23 * * *" \
 	-e SUB_STORE_FRONTEND_BACKEND_PATH=/ChangeMeToUrPasswd \
-	-p 0.0.0.0:31338:3001 \
+	-p 0.0.0.0:3001:3001 \
 	-v /etc/sub-store:/opt/app/data \
 	--name sub-store \
 	xream/sub-store
 ```
 
-2. 在sub-store创建好你的订阅链接
+2. 进入sub-store，默认地址为`服务器IP:3001`。在sub-store创建好你的订阅链接
 
 3. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion)
 
-4. 选择脚本操作，填入 [写入Outbound脚本](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/scriptForAddingOutbound.js)
+4. 选择脚本操作，脚本操作栏填入 [写入Outbound脚本](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/scriptForAddingOutbound.js)
 
-5. 保存，在文件管理中复制配置文件链接，稍后填入网关端的脚本中
+5. 保存，在文件管理中复制配置文件链接，稍后需要填入网关端的脚本中
 
 6. 在你的Linux网关安装好 Sing-Box，安装步骤见 [Sing-Box官方文档](https://sing-box.sagernet.org/installation/package-manager/)
 
-7. 请你把`/usr/bin/sing-box`和`/etc/sing-box`都改成777权限，以防奇怪的错误出现
+7. 请你把`/usr/bin/sing-box`文件和`/etc/sing-box`路径都改成777权限，以防奇怪的错误出现
 
-8. 使用root权限运行脚本，如果你使用的是Tun模式，运行 [run_tun.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tun.sh) 。如果你使用的是Tproxy模式，运行 [run_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tproxy.sh) 。请你把刚才复制的配置文件链接填入：`FULL_URL="https://XXXXXX/api/file/SingBox-Tproxy"`
+8. 使用root权限运行脚本
+   - 如果你使用的是Tun模式，运行 [run_tun.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tun.sh)
+   - 如果你使用的是Tproxy模式，运行 [run_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Dynamic-Config/blob/main/run_tproxy.sh)
+   请你把刚才复制的配置文件链接填入：`FULL_URL="https://XXXXXX/api/file/SingBox-Tproxy"`
 
-9. sing-box面板链接为`[网关IP]:9095`,默认无密码。
+10. Sing-box面板链接为`[网关IP]:9095`，默认无密码。
 
-10. 关于停止Sing-box：
+11. 关于停止Sing-box：
     - Tun模式停止sing-box直接运行`systemctl stop sing-box`
     - Tproxy模式停止sing-box脚本: [stop_tproxy.sh](https://github.com/TooonyChen/Sing-Box-Config/blob/main/stop_tproxy.sh)
 
