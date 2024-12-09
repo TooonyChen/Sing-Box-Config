@@ -23,13 +23,13 @@
 
 3. 在sub-store创建好你的订阅链接
 
-4. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion)
+4. 进入文件管理，新建文件，来源可以选择 [Tproxy配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_TProxy_DevVersion.json) 或者 [Tun配置文件](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/SingBoxConfig_Tun_DevVersion.json)
 
 5. 选择脚本操作，脚本操作栏填入 [写入Outbound脚本](https://raw.githubusercontent.com/TooonyChen/Sing-Box-Dynamic-Config/refs/heads/main/scriptForAddingOutbound.js) ，**记得更改脚本内的变量**
 
 6. 保存，在文件管理中复制配置文件链接，稍后需要填入网关端的脚本中
 
-7. 在你的Linux网关安装好 Sing-Box，安装步骤见 [Sing-Box官方文档](https://sing-box.sagernet.org/installation/package-manager/)
+7. 在你的Linux网关安装好 Sing-Box，安装步骤见 [Sing-Box官方文档](https://sing-box.sagernet.org/installation/package-manager/)，**本repo的配置文件仅支持sing-box 1.11.0+ 版本，目前仍为测试版，安装时请注意甄别。**
 
 8. 请你把`/usr/bin/sing-box`文件和`/etc/sing-box`路径都改成777权限，以防奇怪的错误出现
 
